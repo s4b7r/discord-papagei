@@ -6,6 +6,11 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = discord.Client(intents=intents)
+FUNNY_MESSAGE = 'Polly wants a cracker... and better Wi-Fi! 🦜'
+
+
+async def send_reply(channel, content):
+    await channel.send(f'{content}\n\n{FUNNY_MESSAGE}')
 
 
 @client.event
@@ -26,10 +31,10 @@ async def on_message(message):
         return
 
     if channel_name == 'papagei':
-        await message.channel.send(message.content)
+        await send_reply(message.channel, message.content)
 
     if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+        await send_reply(message.channel, 'Hello!')
         return
 
 
