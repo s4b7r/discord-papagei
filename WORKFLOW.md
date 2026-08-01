@@ -2,7 +2,7 @@
 tracker:
   kind: github
   provider:
-    repo: "OWNER/REPO"
+    repo: "s4b7r/discord-papagei"
     token: $SYMPHONY_GITHUB_TOKEN
   required_labels:
     - "symphony-ready"
