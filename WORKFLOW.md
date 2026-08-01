@@ -20,7 +20,7 @@ workspace:
 hooks:
   timeout_ms: 300000
   after_create: |
-    git clone "git@github-symphony:OWNER/REPO.git" .
+    git clone "git@github-symphony:s4b7r/discord-papagei.git" .
 
 agent:
   max_concurrent_agents: 1
